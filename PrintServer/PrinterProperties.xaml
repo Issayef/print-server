@@ -1,0 +1,21 @@
+﻿<Window x:Name="PropertiesWindow" x:Class="PrintServer.PrinterProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrintServer"
+        mc:Ignorable="d"
+        Title="PrinterProperties" Height="242.017" Width="242.017" WindowStyle="None">
+    <Grid>
+        <ComboBox x:Name="comboPaperSize1" HorizontalAlignment="Left" Margin="98,78,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Ориентация: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="check_book" Content="Книжная" HorizontalAlignment="Left" Margin="98,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.279,-0.095"  Checked="check_book_Checked"/>
+        <CheckBox x:Name="check_album" Content="Альбомная" HorizontalAlignment="Left" Margin="98,36,0,0" VerticalAlignment="Top" Checked="chek_album_Checked"/>
+        <Label Content="Размер&#xD;&#xA;бумаги:" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.737,-0.551"/>
+        <Label Content="Печать:" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="check_colored" Content="Цветная" HorizontalAlignment="Left" Margin="96,118,0,0" VerticalAlignment="Top" Checked="check_colored_Checked" />
+        <CheckBox x:Name="check_noncolored" Content="Ч/Б" HorizontalAlignment="Left" Margin="96,138,0,0" VerticalAlignment="Top" Checked="check_noncolored_Checked"/>
+        <Button Content="ОК" HorizontalAlignment="Left" Margin="143,180,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</Window>

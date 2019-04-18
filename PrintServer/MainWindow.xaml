@@ -1,0 +1,40 @@
+﻿<Window x:Class="PrintServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrintServer"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="142.493" Width="212.200
+        " Topmost="True" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Opacity="1" Icon="/Icon/favicon.ico"  ShowInTaskbar="False"  ShowActivated="False"    IsEnabled="True" Activated="Window_Activated" Loaded="Window_Loaded" Visibility="Hidden" >
+    <Grid Background="LemonChiffon" >
+        <Label x:Name="PrinterLabel" Content="Путь к gswin64c.exe :" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Width="127" Height="26" RenderTransformOrigin="0.431,-0.771"/>
+        <Label x:Name="ScanerLabel" Content="Путь" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.012,0.498" />
+        <Button x:Name="Show_button" Content="Выбрать папку" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="120" Height="21" Click="Show_button_Click"/>
+        <tb:TaskbarIcon x:Name="fNotifyIcon"
+                    Visibility="Visible"
+                    ToolTipText="Доступные устройства"
+                    IconSource="/Icon/favicon.ico"
+                    MenuActivation="LeftOrRightClick"
+                   
+            >
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Настроить конфигурацию"  Click="ChooseFolder">
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Переподключиться"  Click="Reconnect">
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Выход" Click="TrayClickExit">
+                    </MenuItem>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+        <Button x:Name="OkButton" Content="ОК" HorizontalAlignment="Left" Margin="158,107,0,0" VerticalAlignment="Top" Width="44" Height="21" Click="OkButton_Click" RenderTransformOrigin="0.506,-1.04"/>
+        <Label x:Name="PrinterLabel_Copy" Content="Путь к gsprint.exe :" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="112" Height="26" RenderTransformOrigin="0.431,-0.771"/>
+        <Label x:Name="ScanerLabel_Copy" Content="Путь" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.012,0.498" />
+        <Button x:Name="Show_button_Copy" Content="Выбрать папку" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="120" Height="21" Click="Show_button_Copy_Click"/>
+    </Grid>
+</Window>
